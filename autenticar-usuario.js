@@ -1,5 +1,5 @@
 function autenticarUsuario() {
-  return 'Usuário Autenticado Timeout Resolviddo';
+  return 'Usuário autenticado não está mais desativando automaticamente';
 }
 
 module.exports = { autenticarUsuario };
