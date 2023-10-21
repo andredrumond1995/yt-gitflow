@@ -45,16 +45,16 @@ Caso você não tenha a Branch develop:
 ```bash
 1. git checkout develop
 2. git merge feature/autenticar-usuario
-3. git branch -d feature/autenticar-usuario #deletar a branch local (opcional)
-4. git push origin --delete feature/autenticar-usuario #deletar a branch remota (opcional)
+3. git push origin develop
+4. git branch -d feature/autenticar-usuario #deletar a branch local (opcional)
+5. git push origin --delete feature/autenticar-usuario #deletar a branch remota (opcional)
 ```
 
 ### 4. Criar e Mudar para uma Nova Branch de Release;
 
 ```bash
-1. git checkout develop
-2. git checkout -b release/1.0.0
-3. git push origin release/1.0.0
+1. git checkout -b release/1.0.0
+2. git push origin release/1.0.0
 ```
 
 ### 5. Testes deverão ser feitos na Branch release/1.0.0 (caso haja um bugfix);
@@ -67,7 +67,7 @@ Caso você não tenha a Branch develop:
 5. git push origin bugfix/timeout-error
 6. git checkout release/1.0.0
 7. git merge bugfix/timeout-error
-8. git push release/1.0.0
+8. git push origin release/1.0.0
 ```
 
 ### 6. Mesclar Release em master e develop;
@@ -78,9 +78,10 @@ Caso você não tenha a Branch develop:
 3. git push origin master
 
 4. git checkout develop
-5. git git merge release/1.0.0
-6. git branch -d release/1.0.0 #deletar a branch local (opcional)
-7. git push origin --delete release/1.0.0 #deletar a branch remota (opcional)
+5. git merge release/1.0.0
+6. git push origin develop
+7. git branch -d release/1.0.0 #deletar a branch local (opcional)
+8. git push origin --delete release/1.0.0 #deletar a branch remota (opcional)
 
 ```
 
