@@ -1,5 +1,5 @@
 function autenticarUsuario() {
-  return 'Usuario Autenticado';
+  return 'Usuário Autenticado Timeout Resolviddo';
 }
 
 module.exports = { autenticarUsuario };
