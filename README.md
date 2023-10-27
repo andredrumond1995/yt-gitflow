@@ -3,13 +3,14 @@
 
 O GitFlow é um modelo de organização de branches no Git que simplifica o controle de projetos de software. Ele estabelece uma estrutura definida para o fluxo de trabalho, criando branches para fases distintas do ciclo de vida do software, como funcionalidades, lançamentos e correções.
 
-## Branches Principais
+## Branches
 
 - **Master:** Representa a versão de produção do software.
 - **Develop:** É onde o desenvolvimento ativo ocorre e todas as funcionalidades são integradas.
 - **Feature:** Branches para desenvolver novas funcionalidades.
 - **Release:** Branches para preparar versões para lançamento.
 - **Hotfix:** Branches para corrigir bugs críticos em produção.
+- **Bugfix:** Branches para corrigir bugs em release branches.
 
 ## Tags
 
@@ -17,19 +18,24 @@ Tags são rótulos vinculados a commits, indicando pontos cruciais na história 
 
 ## Fluxo Passo a Passo
 
+** Lembre-se de já ter uma branch principal base, como a master, pois a branch develop irá utilizá-la como base. **
+
 ### 1. Criar ou Mudar para Branch develop
 
 Caso você já tenha a Branch develop:
 
 ```bash
 1. git checkout develop
+2. #adicione alguns commits caso seja necessário utilizando git add e git commit -m "tipo(escopo): mensagem"
+3. git push origin develop
 ```
 
 Caso você não tenha a Branch develop:
 
 ```bash
 1. git checkout -b develop
-2. git push origin develop
+2. #adicione alguns commits caso seja necessário utilizando git add e git commit -m "tipo(escopo): mensagem"
+3. git push origin develop
 ```
 
 ### 2. Criar e Mudar para uma Nova Branch de Feature (Funcionalidade):
@@ -117,3 +123,9 @@ Caso você não tenha a Branch develop:
 15. git branch -d hotfix/usuario-desativando #deletar a branch local (opcional)
 16. git push origin --delete hotfix/usuario-desativando #deletar a branch remota (opcional)
 ```
+
+## Links Adicionais
+
+- [Canal no YouTube](https://www.youtube.com/@drumonddev/videos)
+- [Video - GitFlow na prática](https://youtu.be/xC7frT2JPGE)
+- [Instagram](https://www.instagram.com/drumond.dev/)
